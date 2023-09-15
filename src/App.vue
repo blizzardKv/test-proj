@@ -39,9 +39,11 @@ import { mapState } from 'vuex';
 import WelcomeItem from './components/WelcomeItem.vue';
 import GreetingItem from './components/GreetingItem.vue';
 import EncourageItem from './components/EncourageItem.vue';
+import { dataMixin } from '@/mixins';
 
 export default {
   name: 'World',
+  mixins: [dataMixin],
   props: {
     itemData: { type: Object, required: true },
     count: { type: Number, required: true },
