@@ -61,7 +61,7 @@ export default {
   computed: {
     ...mapState(['goodsList']),
   },
-  created() {
+  mounted() {
     setInterval(() => this.increaseCount, 200);
   },
   methods: {
@@ -82,7 +82,7 @@ export default {
     },
 
     onGoodsListButtonClick() {
-      this.goodsList.push({ item: 'NewGood' });
+      this.goodsList.push({ item: 'NewGood', id: 4 });
     }
   }
 }
